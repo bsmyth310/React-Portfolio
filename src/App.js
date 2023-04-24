@@ -1,14 +1,17 @@
 
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layouts';
+import Layout from './components/Layout';
+import Home from './components/Home';
 
 function App() {
   return (
    <>
-  <Routes>
-    <Route path="/" element={<Layout />} />
-  </Routes>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route inded element={<Home />} />
+      </Route>
+    </Routes>
    </>
   );
 }
